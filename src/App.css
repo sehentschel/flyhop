@@ -1,0 +1,68 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+
+.card {
+  padding: 2em;
+  border-width: 0.1em;
+  border-style: solid;
+  border-color: black;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.fileImage {
+  width: 50px;
+  height: 50px;
+}
+
+.buttonFlyHop {
+  color: white;
+  border-radius: 12px;
+  background-color: rgba(36, 61, 107, 255);
+}
+
+.fileDropZone {
+  border-collapse: separate;
+  overflow: hidden;
+  border-radius: '15px';
+  border-spacing: '1px';
+  border-style: dashed;
+  border-color: rgba(220, 221, 230, 255);
+  padding: '30px';
+  text-align: 'center';
+  cursor: 'pointer';
+  margin-bottom: '10px';
+}
+
+.sectionHeader {
+  color: rgba(36, 61, 107, 255);
+  text-align: left;
+  width: '150px';
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.hrSection {
+  max-width: 350px;
+  width: 350px;
+  height: 3px;
+  background: rgba(202, 202, 202, 255);
+  max-height: 100px;
+  color: rgba(202, 202, 202, 255);
+  margin-left: 0;
+}
