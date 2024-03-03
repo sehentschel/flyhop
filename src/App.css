@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 2rem;
+  z-index: -1000;
 }
 
 .card {
@@ -30,10 +31,12 @@
   height: 50px;
 }
 
-.buttonFlyHop {
+.buttonModal {
   color: white;
   border-radius: 12px;
   background-color: rgba(36, 61, 107, 255);
+  display: flex;
+  align-items: center;
 }
 
 .fileDropZone {
@@ -58,8 +61,8 @@
 }
 
 .hrSection {
-  max-width: 350px;
-  width: 350px;
+  max-width: 50%;
+  width: 50%;
   height: 3px;
   background: rgba(202, 202, 202, 255);
   max-height: 100px;
