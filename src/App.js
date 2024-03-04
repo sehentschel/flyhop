@@ -2,15 +2,15 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import FileDragDropCard from "./components/FileDragDropCard";
+import ClinicDropdown from "./components/ClientDropdown";
 import "./css/modal.css";
+import ClientSelectorCard from "./components/ClientSelectorCard";
 
 const App = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const exampleText = "ex\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
   return (
     <>
@@ -30,12 +30,14 @@ const App = () => {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>{exampleText}</p>
           <div className="left-component">
+            <hr className="hrSection"></hr>
             <FileDragDropCard></FileDragDropCard>
+            <hr className="hrSection"></hr>
           </div>
-          <div>
-            <p>right content</p>
+
+          <div className="right-component">
+            <ClientSelectorCard />
           </div>
         </Modal.Body>
         <Modal.Footer className="border-0">

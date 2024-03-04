@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
-import imagePlaceholder from '../images/file_icon.png'; // Import your specific image
+import React, { useState, useRef } from "react";
+import imagePlaceholder from "../images/file_icon.png"; // Import your specific image
 
 const FileDropZone = ({ onFilesDrop }) => {
-    
   const [dragging, setDragging] = useState(false);
   const [droppedFiles, setDroppedFiles] = useState([]);
   const fileInputRef = useRef(null);
@@ -40,32 +39,38 @@ const FileDropZone = ({ onFilesDrop }) => {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       onClick={() => fileInputRef.current.click()}
-      className='fileDropZone'
+      className="fileDropZone"
       style={{
-        padding: '30px',
-        borderRadius: '15px',
-        marginBottom: '10px'
+        padding: "30px",
+        borderRadius: "15px",
+        marginBottom: "10px",
+        marginLeft: "5px",
+        marginRight: "5px",
       }}
     >
-      <div style={{padding: '8px'}}>
-          <img src={imagePlaceholder} alt="Drag and Drop File" style={{ maxWidth: '8%', marginBottom: '10px' }} />
-            <input
-                type="file"
-                style={{ display: 'none' }}
-                ref={fileInputRef}
-                onChange={handleFileSelect}
-            />
-            <p>Drag &amp; Drop files here or click to Browse</p>
-            {droppedFiles.length > 0 && (
-                <div>
-                <h2>Dropped Files:</h2>
-                <ul>
-                    {droppedFiles.map((file, index) => (
-                    <li key={index}>{file.name}</li>
-                    ))}
-                </ul>
-                </div>
-            )}
+      <div style={{ padding: "8px" }}>
+        <img
+          src={imagePlaceholder}
+          alt="Drag and Drop File"
+          style={{ maxWidth: "8%", marginBottom: "10px" }}
+        />
+        <input
+          type="file"
+          style={{ display: "none" }}
+          ref={fileInputRef}
+          onChange={handleFileSelect}
+        />
+        <p>Drag &amp; Drop files here or click to Browse</p>
+        {droppedFiles.length > 0 && (
+          <div>
+            <h2>Dropped Files:</h2>
+            <ul>
+              {droppedFiles.map((file, index) => (
+                <li key={index}>{file.name}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

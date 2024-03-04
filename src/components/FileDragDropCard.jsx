@@ -16,27 +16,40 @@ const FileDragDropCard = () => {
   };
 
   return (
-    <div>
+    <div
+      stlye={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginLeft: "20px",
+        display: "flex",
+      }}
+    >
       {/*TODO //add drop down of file names?? */}
-      <hr className="hrSection"></hr>
+
       <div>
-        <div className="sectionHeader">
+        <label className="skyhopText">
           Select a manifest you'd like to import
-        </div>
+        </label>
       </div>
-      <div style={{ borderRadius: "15px" }}>
+      <div
+        style={{
+          borderRadius: "15px",
+          border: "0.5px solid black",
+          padding: "20px",
+        }}
+      >
         <FileDropZone onFilesDrop={handleFilesDrop} />
         <Button
           variant="primary"
           size="lg"
           onClick={() => {}}
-          className="buttonFlyHop"
+          className="buttonModal"
           style={{ width: "50%" }}
         >
           Upload Manifest
         </Button>
       </div>
-      <hr className="hrSection"></hr>
     </div>
   );
 };
