@@ -4,15 +4,10 @@ import React, { useState } from "react";
 import FileDropZone from "./FileDropZone";
 import Button from "react-bootstrap/Button";
 
-const FileDragDropCard = () => {
-  const [droppedFiles, setDroppedFiles] = useState([]);
-  const [text, setText] = useState([]);
-
+const FileDragDropCard = ({ setFiles }) => {
   const handleFilesDrop = (files) => {
-    setDroppedFiles(files);
-    setText(files.name);
-    // Do whatever you need to do with the files in your higher-level component
-    console.log("Dropped files:", files);
+    console.log(files);
+    setFiles(files);
   };
 
   return (

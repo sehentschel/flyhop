@@ -4,16 +4,24 @@ import Modal from "react-bootstrap/Modal";
 import FileDragDropCard from "./components/FileDragDropCard";
 import ClinicDropdown from "./components/ClientDropdown";
 import "./css/modal.css";
-import ClientSelectorCard from "./components/ClientSelectorCard";
+import SchedulingSettingsCard from "./components/SchedulingSettingsCard";
 
 const App = () => {
   const [show, setShow] = useState(false);
+  const [files, setFiles] = useState();
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setFiles({});
+    setShow(false);
+  };
   const handleShow = () => setShow(true);
+  const handleSubmit = () => {
+    console.log(files);
+    alert(files[0]?.name);
+  };
 
   return (
-    <>
+    <div class="container" style={{ display: "flex", alignContent: "center" }}>
       <Button variant="primary" onClick={handleShow}>
         Launch static backdrop modal
       </Button>
@@ -23,33 +31,44 @@ const App = () => {
         backdrop="static"
         keyboard={false}
         centered
-        dialogClassName="modal"
         size="xl"
       >
-        <Modal.Header className="border-0" closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+        <Button
+          onClick={handleClose}
+          style={{ width: "50px", marginTop: "20px", marginLeft: "20px" }}
+        >
+          X
+        </Button>
+        <Modal.Header className="border-0">
+          <Modal.Title>Document Upload</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="left-component">
-            <hr className="hrSection"></hr>
-            <FileDragDropCard></FileDragDropCard>
-            <hr className="hrSection"></hr>
-          </div>
+          <div class="row">
+            <div class="col">
+              <hr className="hrSection"></hr>
+              <FileDragDropCard setFiles={setFiles}></FileDragDropCard>
+              <hr className="hrSection"></hr>
+            </div>
 
-          <div className="right-component">
-            <ClientSelectorCard />
+            <div class="col">
+              <SchedulingSettingsCard />
+            </div>
           </div>
         </Modal.Body>
-        <Modal.Footer className="border-0">
-          {/* <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button> */}
-          <Button variant="primary" size="lg">
+        <Modal.Footer className="border-0" style={{ justifyContent: "center" }}>
+          <Button variant="primary" size="lg" onClick={handleSubmit}>
             Submit Upload
+          </Button>
+          <Button
+            size="lg"
+            class=" btn btn-outline-warning"
+            onClick={handleClose}
+          >
+            Cancel
           </Button>
         </Modal.Footer>
       </Modal>
-    </>
+    </div>
   );
 };
 

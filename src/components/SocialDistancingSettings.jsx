@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-const HorizontalRadioButtons = ({ items = [] }) => {
+const SchedulingSettings = () => {
   const [selectionType, setSelectedOption] = useState("");
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    //send to parent
   };
 
   return (
@@ -13,38 +14,38 @@ const HorizontalRadioButtons = ({ items = [] }) => {
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadio"
-          id="radioOption1"
-          value={items[0]}
-          checked={selectionType === "option1"}
+          name="yes-social-distance"
+          id="yes-social-distance"
+          value="yes-social-distance"
+          checked={selectionType === "yes-social-distance"}
           onChange={handleOptionChange}
         />
         <label
           className="form-check-label skyhopTextColor"
-          htmlFor="radioOption1"
+          htmlFor="yes-social-distance"
         >
-          {items[0]}
+          Yes
         </label>
       </div>
       <div className="form-check form-check-inline">
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadio"
-          id="radioOption2"
-          value={items[1]}
-          checked={selectionType === "option2"}
+          name="no-social-distance"
+          id="no-social-distance"
+          value="no-social-distance"
+          checked={selectionType === "no-social-distance"}
           onChange={handleOptionChange}
         />
         <label
           className="form-check-label skyhopTextColor"
-          htmlFor="radioOption2"
+          htmlFor="no-social-distance"
         >
-          {items[1]}
+          No
         </label>
       </div>
     </div>
   );
 };
 
-export default HorizontalRadioButtons;
+export default SchedulingSettings;

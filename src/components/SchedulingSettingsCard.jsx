@@ -1,8 +1,9 @@
 import React from "react";
 import DropdownSelector from "./ClientDropdown";
-import HorizontalRadioButtons from "./HorizontalRadioButtons";
+import ClientSelectionType from "./ClientSelectionType";
+import SchedulingSettings from "./SchedulingSettings";
 
-const ClientSelectorCard = () => {
+const SchedulingSettingsCard = () => {
   const dropdownData = [
     { testingCenter: 1, label: "Testing Center 1" },
     { testingCenter: 2, label: "Testing Center 2" },
@@ -10,8 +11,6 @@ const ClientSelectorCard = () => {
     { testingCenter: 4, label: "Testing Center 4" },
   ];
 
-  const clientSchedulingOptions = ["Yes", "No"];
-  const clientSelectionOptions = ["Single", "Multiple"];
   const clients = ["client1", "client2", "client3", "client4"];
 
   return (
@@ -19,7 +18,7 @@ const ClientSelectorCard = () => {
       <div className="skyhopText" style={{ marginBottom: "15px" }}>
         Split schedule using social distancing?
       </div>
-      <HorizontalRadioButtons items={clientSchedulingOptions} />
+      <SchedulingSettings></SchedulingSettings>
       <hr className="hrSection"></hr>
 
       <div className="skyhopText" style={{ marginBottom: "15px" }}>
@@ -31,7 +30,7 @@ const ClientSelectorCard = () => {
         Client:
       </div>
       <div>
-        <HorizontalRadioButtons items={clientSelectionOptions} />
+        <ClientSelectionType />
       </div>
       {dropdownData.map((data) => (
         <div
@@ -46,4 +45,4 @@ const ClientSelectorCard = () => {
   );
 };
 
-export default ClientSelectorCard;
+export default SchedulingSettingsCard;

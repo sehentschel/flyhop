@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ClientSelectionType = (items = []) => {
+const ClientSelectionType = () => {
   const [selectionType, setSelectedOption] = useState("");
 
   const handleOptionChange = (event) => {
@@ -13,34 +13,34 @@ const ClientSelectionType = (items = []) => {
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadio"
-          id="radioOption1"
-          value="option1"
-          checked={selectionType === "option1"}
+          name="single-client-radio"
+          id="single-client-radio"
+          value="single-client-radio"
+          checked={selectionType === "single-client-radio"}
           onChange={handleOptionChange}
         />
         <label
           className="form-check-label skyhopTextColor"
-          htmlFor="radioOption1"
+          htmlFor="single-client-radio"
         >
-          {items[0]}
+          Single
         </label>
       </div>
       <div className="form-check form-check-inline">
         <input
           className="form-check-input"
           type="radio"
-          name="exampleRadio"
-          id="radioOption2"
-          value="option2"
-          checked={selectionType === "option2"}
+          name="multiple-clients-radio"
+          id="multiple-clients-radio"
+          value="multiple-clients-radio"
+          checked={selectionType === "multiple-clients-radio"}
           onChange={handleOptionChange}
         />
         <label
           className="form-check-label skyhopTextColor"
-          htmlFor="radioOption2"
+          htmlFor="multiple-clients-radio"
         >
-          {items[1]}
+          Multiple
         </label>
       </div>
     </div>
