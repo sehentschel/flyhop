@@ -19,10 +19,7 @@ const HorizontalRadioButtons = ({ items = [] }) => {
           checked={selectionType === "option1"}
           onChange={handleOptionChange}
         />
-        <label
-          className="form-check-label skyhopTextColor"
-          htmlFor="radioOption1"
-        >
+        <label className="form-check-label skyhopText" htmlFor="radioOption1">
           {items[0]}
         </label>
       </div>
@@ -36,10 +33,7 @@ const HorizontalRadioButtons = ({ items = [] }) => {
           checked={selectionType === "option2"}
           onChange={handleOptionChange}
         />
-        <label
-          className="form-check-label skyhopTextColor"
-          htmlFor="radioOption2"
-        >
+        <label className="form-check-label skyhopText" htmlFor="radioOption2">
           {items[1]}
         </label>
       </div>

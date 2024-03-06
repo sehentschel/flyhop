@@ -20,7 +20,7 @@ const ClientSelectionType = () => {
           onChange={handleOptionChange}
         />
         <label
-          className="form-check-label skyhopTextColor"
+          className="form-check-label skyhopText"
           htmlFor="single-client-radio"
         >
           Single
@@ -37,7 +37,7 @@ const ClientSelectionType = () => {
           onChange={handleOptionChange}
         />
         <label
-          className="form-check-label skyhopTextColor"
+          className="form-check-label skyhopText"
           htmlFor="multiple-clients-radio"
         >
           Multiple

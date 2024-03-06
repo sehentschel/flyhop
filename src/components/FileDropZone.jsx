@@ -24,12 +24,15 @@ const FileDropZone = ({ onFilesDrop }) => {
     e.preventDefault();
     setDragging(false);
     const files = Array.from(e.dataTransfer.files);
+    console.log(files);
+
     onFilesDrop(files);
   };
 
   const handleFileSelect = (e) => {
     const files = Array.from(e.target.files);
     onFilesDrop(files);
+    console.log(files);
   };
 
   return (
@@ -41,18 +44,21 @@ const FileDropZone = ({ onFilesDrop }) => {
       onClick={() => fileInputRef.current.click()}
       className="fileDropZone"
       style={{
-        padding: "30px",
+        padding: "10px",
         borderRadius: "15px",
         marginBottom: "10px",
-        marginLeft: "5px",
-        marginRight: "5px",
+        cursor: "pointer",
       }}
     >
-      <div style={{ padding: "8px" }}>
+      <div style={{ padding: "8px", textAlign: "center" }}>
         <img
           src={imagePlaceholder}
           alt="Drag and Drop File"
-          style={{ maxWidth: "8%", marginBottom: "10px" }}
+          style={{
+            maxWidth: "8%",
+            marginBottom: "10px",
+            align: "center",
+          }}
         />
         <input
           type="file"

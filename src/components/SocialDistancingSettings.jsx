@@ -21,7 +21,7 @@ const SchedulingSettings = () => {
           onChange={handleOptionChange}
         />
         <label
-          className="form-check-label skyhopTextColor"
+          className="form-check-label skyhopText"
           htmlFor="yes-social-distance"
         >
           Yes
@@ -38,7 +38,7 @@ const SchedulingSettings = () => {
           onChange={handleOptionChange}
         />
         <label
-          className="form-check-label skyhopTextColor"
+          className="form-check-label skyhopText"
           htmlFor="no-social-distance"
         >
           No

@@ -43,35 +43,42 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  border: "0.5px dashed";
-  border-radius: '15px';
-  border-spacing: '1px';
   border-style: dashed;
   border-width: 3px;
   border-color: rgba(220, 221, 230, 255);
-  margin-left: '30px';
-  cursor: 'pointer';
-  margin-bottom: '10px';
 }
 
-.skyhopText {
+.skyhopLabel {
   color: rgba(36, 61, 107, 255);
   text-align: left;
-  width: '150px';
   font-weight: 700;
   margin-left: 0;
 }
 
-.skyhopTextColor {
-  color: rgba(36, 61, 107, 255);
+.skyhopTextBold {
   font-weight: 500;
+}
+
+.skyhopText {
+  color: rgba(36, 61, 107, 255);
+  font-size: smaller;
 }
 
 .hrSection {
   width: 60%;
   height: 2px;
   background: rgba(202, 202, 202, 255);
-  max-height: 100px;
   color: rgba(202, 202, 202, 255);
-  margin-left: 0;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.custom-dropdown .dropdown-item {
+  background-color: white !important;
+  color: rgba(202, 202, 202, 255) !important;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.674);
+  /* Darker blue on hover */
 }
