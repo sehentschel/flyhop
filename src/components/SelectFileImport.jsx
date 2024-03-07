@@ -1,22 +1,29 @@
 import React from "react";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
+import { Dropdown } from "react-bootstrap";
 
 const SelectFileImport = ({ items = [] }) => {
   return (
-    <DropdownButton
-      id="dropdown-basic-button"
-      class="bg-white"
-      className={"d-grid"}
-      title="Select Import Name:"
-      style={{
-        borderRadius: "20px",
-      }}
-    >
-      {items?.map((item, index) => (
-        <Dropdown.Item key={index}>{item}</Dropdown.Item>
-      ))}
-    </DropdownButton>
+    <div style={{ width: "100%" }}>
+      <Dropdown>
+        <Dropdown.Toggle
+          block
+          variant="secondary"
+          style={{
+            backgroundColor: "white",
+            width: "100%",
+            borderRadius: "10px",
+          }}
+          className="custom-dropdown-toggle skyhopTextBold"
+        >
+          Select Import Name:
+        </Dropdown.Toggle>
+        <Dropdown.Menu style={{ right: "auto", left: 0, textAlign: "left" }}>
+          <Dropdown.Item>Action</Dropdown.Item>
+          <Dropdown.Item>Another action</Dropdown.Item>
+          <Dropdown.Item>Something else</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
   );
 };
 

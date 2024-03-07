@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import FileDragDropCard from "./components/FileDragDropCard";
 import ToleranceWindow from "./components/ToleranceWindowSettings";
-import ClinicDropdown from "./components/ClientDropdown";
 import ElapsedDataCheck from "./components/ElapsedDataCheck";
 import "./css/modal.css";
 import SchedulingSettingsCard from "./components/SchedulingSettingsCard";
@@ -15,6 +14,8 @@ import Col from "react-bootstrap/Col";
 const App = () => {
   const [show, setShow] = useState(false);
   const [files, setFiles] = useState(null);
+
+  console.log(files);
 
   const handleClose = () => {
     setFiles({});
@@ -37,7 +38,6 @@ const App = () => {
         backdrop="static"
         keyboard={false}
         centered
-        alignContent="centered"
         size="xl"
         style={{ padding: "20px" }}
       >
@@ -75,7 +75,7 @@ const App = () => {
                   <label className="skyhopText skyhopLabel">
                     Elapse Data Checking
                   </label>
-                  <ElapsedDataCheck checkFile={{ files }} />
+                  <ElapsedDataCheck checkFile={files} />
                   <hr className="hrSection"></hr>
                   <label className="skyhopLabel skyhopText">
                     Tolerance Window:
@@ -83,8 +83,7 @@ const App = () => {
                   <ToleranceWindow />
                 </div>
               </Col>
-              <Col></Col>
-              <Col xs={4}>
+              <Col xs={4} style={{ marginLeft: "4%" }}>
                 <SchedulingSettingsCard />
               </Col>
             </Row>

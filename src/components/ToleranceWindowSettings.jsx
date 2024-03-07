@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import ToggleButton from "react-bootstrap/ToggleButton";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const ToleranceWindow = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -9,8 +10,8 @@ const ToleranceWindow = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <div class="row">
-      <div class="col">
+    <Row>
+      <Col xs={3} style={{ padding: 0, width: "120px" }}>
         <div className="form-check form-switch">
           <input
             className="form-check-input"
@@ -27,11 +28,15 @@ const ToleranceWindow = () => {
             {isChecked ? " ON" : " OFF"}
           </label>
         </div>
-      </div>
-      <div class="col">
+      </Col>
+      <Col xs={1} style={{ padding: 0, width: "5px" }}>
+        {" "}
+        |{" "}
+      </Col>
+      <Col xs="4">
         <label className="skyhopText">Select Tolerance Level</label>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 
