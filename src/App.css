@@ -34,9 +34,14 @@
 .buttonModal {
   color: white;
   border-radius: 12px;
-  background-color: rgba(36, 61, 107, 255);
+  background-color: rgba(36, 61, 107, 255) !important;
   display: flex;
   align-items: center;
+  border: 1px solid rgba(36, 61, 107, 255) !important
+}
+
+.buttonModa:hover {
+    background-color: rgba(36, 61, 107, 150) !important;
 }
 
 .fileDropZone {
@@ -64,13 +69,17 @@
   font-size: smaller;
 }
 
+.skyhopTextColor {
+    color: rgba(36, 61, 107, 255);
+}
+
 .hrSection {
   width: 60%;
   height: 2px;
   background: rgba(202, 202, 202, 255);
   color: rgba(202, 202, 202, 255);
   margin-bottom: 4px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .custom-dropdown .dropdown-item {

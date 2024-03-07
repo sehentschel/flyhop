@@ -18,9 +18,9 @@ const SelectFileImport = ({ items = [] }) => {
           Select Import Name:
         </Dropdown.Toggle>
         <Dropdown.Menu style={{ right: "auto", left: 0, textAlign: "left" }}>
-          <Dropdown.Item>Action</Dropdown.Item>
-          <Dropdown.Item>Another action</Dropdown.Item>
-          <Dropdown.Item>Something else</Dropdown.Item>
+          <Dropdown.Item>Example1.txt</Dropdown.Item>
+          <Dropdown.Item>Example2.txt</Dropdown.Item>
+          <Dropdown.Item>Example3.txt</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>

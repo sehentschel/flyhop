@@ -5,6 +5,7 @@ import FileDropZone from "./FileDropZone";
 import Button from "react-bootstrap/Button";
 
 const FileDragDropCard = ({ setFiles }) => {
+  const [uploadedFiles, setUploadedFiles] = useState(null);
   const handleFilesDrop = (files) => {
     console.log(files);
     setFiles(files);
@@ -18,12 +19,11 @@ const FileDragDropCard = ({ setFiles }) => {
         padding: "20px",
       }}
     >
-      <FileDropZone onFilesDrop={handleFilesDrop} />
+      <FileDropZone onFilesDrop={setUploadedFiles} />
       <div style={{ textAlign: "center" }}>
         <Button
           variant="primary"
-          size="lg"
-          onClick={() => {}}
+          onClick={() => handleFilesDrop(uploadedFiles)}
           className="buttonModal"
           style={{ width: "50%", position: "center" }}
         >

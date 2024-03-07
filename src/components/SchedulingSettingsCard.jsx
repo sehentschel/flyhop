@@ -19,7 +19,7 @@ const SchedulingSettingsCard = () => {
         Split schedule using social distancing?
       </div>
       <SchedulingSettings></SchedulingSettings>
-      <hr className="hrSection"></hr>
+      <hr style={{ width: "90%" }} className="hrSection"></hr>
 
       <div className="skyhopLabel skyhopText" style={{ marginBottom: "15px" }}>
         Location Checking:
@@ -31,7 +31,7 @@ const SchedulingSettingsCard = () => {
         All Available!
       </div>
 
-      <hr className="hrSection"></hr>
+      <hr style={{ width: "90%" }} className="hrSection"></hr>
       <div className="skyhopLabel skyhopText" style={{ marginBottom: "15px" }}>
         Client:
       </div>

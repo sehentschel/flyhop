@@ -23,8 +23,11 @@ const App = () => {
   };
   const handleShow = () => setShow(true);
   const handleSubmit = () => {
-    console.log(files);
-    alert(files[0]?.name);
+    if (files !== null) {
+      alert(`Uploaded ${files[0]?.name}`);
+    } else {
+      alert("No file uploaded!");
+    }
   };
 
   return (
@@ -44,15 +47,34 @@ const App = () => {
         <Button
           onClick={handleClose}
           style={{ width: "50px", marginTop: "20px", marginLeft: "20px" }}
+          className="buttonModal"
         >
           X
         </Button>
         <Row>
           <Col></Col>
           <Col>
-            <div style={{ width: "100w", textAlign: "center" }}>
-              <Modal.Title>Document Upload</Modal.Title>
-              <hr className="hrHeader"></hr>
+            <div
+              style={{
+                width: "200w",
+                textAlign: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Modal.Title>
+                <div>
+                  <label
+                    className="skyhopTextColor"
+                    style={{ fontSize: "2.5rem" }}
+                  >
+                    Document Upload
+                  </label>
+                  <hr
+                    style={{ width: "100%", justifySelf: "centered" }}
+                    className="hrSection"
+                  ></hr>
+                </div>
+              </Modal.Title>
             </div>
           </Col>
           <Col></Col>
@@ -88,14 +110,34 @@ const App = () => {
               </Col>
             </Row>
           </Container>
+          <div style={{ textAlign: "center" }}>
+            {files !== null ? (
+              <label style={{ fontSize: "med" }} className="skyhopLabel">
+                Data in the import file is correct. Please press Continue to
+                import.
+              </label>
+            ) : (
+              <></>
+            )}
+          </div>
         </Modal.Body>
         <Modal.Footer className="border-0" style={{ justifyContent: "center" }}>
-          <Button variant="primary" size="lg" onClick={handleSubmit}>
+          <Button
+            variant="primary"
+            style={{ width: "20%" }}
+            className="buttonModal"
+            onClick={handleSubmit}
+          >
             Submit Upload
           </Button>
           <Button
-            size="lg"
-            class="btn btn-outline-warning"
+            class="btn btn-secondary btn-outline-warning"
+            style={{
+              width: "15%",
+              backgroundColor: "white",
+              color: "green",
+              border: "2px solid green",
+            }}
             onClick={handleClose}
           >
             Cancel
