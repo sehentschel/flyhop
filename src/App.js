@@ -112,7 +112,7 @@ const App = () => {
           </Container>
           <div style={{ textAlign: "center" }}>
             {files !== null ? (
-              <label style={{ fontSize: "med" }} className="skyhopLabel">
+              <label style={{ fontSize: "14px" }} className="skyhopLabel">
                 <b>
                   Data in the import file is correct. Please press Continue to
                   import.
@@ -123,7 +123,10 @@ const App = () => {
             )}
           </div>
         </Modal.Body>
-        <Modal.Footer className="border-0" style={{ justifyContent: "center" }}>
+        <Modal.Footer
+          className="border-0"
+          style={{ justifyContent: "center", paddingTop: "1px" }}
+        >
           <Button
             variant="primary"
             style={{ width: "20%", fontSize: "12px", padding: "10px" }}
