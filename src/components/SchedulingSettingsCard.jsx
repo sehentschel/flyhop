@@ -15,14 +15,14 @@ const SchedulingSettingsCard = () => {
 
   return (
     <div>
-      <div className="skyhopLabel skyhopText" style={{ marginBottom: "15px" }}>
-        Split schedule using social distancing?
+      <div className="skyhopLabel" style={{ marginBottom: "15px" }}>
+        <b>Split schedule using social distancing?</b>
       </div>
       <SchedulingSettings></SchedulingSettings>
       <hr style={{ width: "90%" }} className="hrSection"></hr>
 
-      <div className="skyhopLabel skyhopText" style={{ marginBottom: "15px" }}>
-        Location Checking:
+      <div className="skyhopLabel" style={{ marginBottom: "15px" }}>
+        <b>Location Checking:</b>
       </div>
       <div
         class="text-success"
@@ -32,8 +32,8 @@ const SchedulingSettingsCard = () => {
       </div>
 
       <hr style={{ width: "90%" }} className="hrSection"></hr>
-      <div className="skyhopLabel skyhopText" style={{ marginBottom: "15px" }}>
-        Client:
+      <div className="skyhopLabel" style={{ marginBottom: "15px" }}>
+        <b>Client:</b>
       </div>
       <div>
         <ClientSelectionType />
@@ -44,7 +44,10 @@ const SchedulingSettingsCard = () => {
           className="d-flex align-items-center mb-8]"
           style={{ marginTop: "10px", marginBottom: "20px" }}
         >
-          <p className="skyhopText" style={{ marginRight: "30px" }}>
+          <p
+            className="skyhopText"
+            style={{ marginRight: "30px", fontSize: "11px" }}
+          >
             {data.label}
           </p>
           <DropdownSelector items={clients} />

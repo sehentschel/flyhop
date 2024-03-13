@@ -65,9 +65,9 @@ const App = () => {
                 <div>
                   <label
                     className="skyhopTextColor"
-                    style={{ fontSize: "2.5rem" }}
+                    style={{ fontSize: "2.5rem", fontFamily: "Helvetica" }}
                   >
-                    Document Upload
+                    <b>Document Upload</b>
                   </label>
                   <hr
                     style={{ width: "100%", justifySelf: "centered" }}
@@ -87,20 +87,20 @@ const App = () => {
                 <SelectFileImport />
                 <hr className="hrSection"></hr>
                 <div>
-                  <label className="skyhopText skyhopLabel">
-                    Select a manifest you'd like to import
+                  <label className="skyhopLabel">
+                    <b>Select a manifest you'd like to import</b>
                   </label>
                 </div>
                 <FileDragDropCard setFiles={setFiles}></FileDragDropCard>
                 <hr className="hrSection"></hr>
                 <div>
-                  <label className="skyhopText skyhopLabel">
-                    Elapse Data Checking
+                  <label className="skyhopLabel">
+                    <b>Elapse Data Checking</b>
                   </label>
                   <ElapsedDataCheck checkFile={files} />
                   <hr className="hrSection"></hr>
-                  <label className="skyhopLabel skyhopText">
-                    Tolerance Window:
+                  <label className="skyhopLabel">
+                    <b>Tolerance Window:</b>
                   </label>
                   <ToleranceWindow />
                 </div>
@@ -113,8 +113,10 @@ const App = () => {
           <div style={{ textAlign: "center" }}>
             {files !== null ? (
               <label style={{ fontSize: "med" }} className="skyhopLabel">
-                Data in the import file is correct. Please press Continue to
-                import.
+                <b>
+                  Data in the import file is correct. Please press Continue to
+                  import.
+                </b>
               </label>
             ) : (
               <></>
@@ -124,19 +126,22 @@ const App = () => {
         <Modal.Footer className="border-0" style={{ justifyContent: "center" }}>
           <Button
             variant="primary"
-            style={{ width: "20%" }}
+            style={{ width: "20%", fontSize: "12px", padding: "10px" }}
             className="buttonModal"
             onClick={handleSubmit}
           >
-            Submit Upload
+            Continue Import
           </Button>
           <Button
             class="btn btn-secondary btn-outline-warning"
             style={{
+              borderRadius: "12px",
               width: "15%",
               backgroundColor: "white",
               color: "green",
               border: "2px solid green",
+              fontSize: "12px",
+              padding: "10px",
             }}
             onClick={handleClose}
           >

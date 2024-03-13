@@ -9,15 +9,6 @@ const DropdownSelector = ({ items = [] }) => {
   };
 
   return (
-    // <DropdownButton
-    //   id="dropdown-basic-button"
-    //   title="Select Client"
-    //   style={{ marginBottom: "5px", backgroundColor: "white" }}
-    // >
-    //   {items?.map((item, index) => (
-    //     <Dropdown.Item key={index}>{item}</Dropdown.Item>
-    //   ))}
-    // </DropdownButton>
     <Dropdown>
       <Dropdown.Toggle
         block

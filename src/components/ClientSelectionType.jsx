@@ -20,8 +20,8 @@ const ClientSelectionType = () => {
           onChange={handleOptionChange}
         />
         <label
+          style={{ fontFamily: "Arial" }}
           className="form-check-label skyhopText"
-          htmlFor="single-client-radio"
         >
           Single
         </label>
@@ -36,12 +36,7 @@ const ClientSelectionType = () => {
           checked={selectionType === "multiple-clients-radio"}
           onChange={handleOptionChange}
         />
-        <label
-          className="form-check-label skyhopText"
-          htmlFor="multiple-clients-radio"
-        >
-          Multiple
-        </label>
+        <label className="form-check-label skyhopText">Multiple</label>
       </div>
     </div>
   );
