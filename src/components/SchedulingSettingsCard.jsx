@@ -2,6 +2,7 @@ import React from "react";
 import DropdownSelector from "./ClientDropdown";
 import ClientSelectionType from "./ClientSelectionType";
 import SchedulingSettings from "./SocialDistancingSettings";
+import imagePlaceholder from "../images/clockblue.jpg";
 
 const SchedulingSettingsCard = () => {
   const dropdownData = [
@@ -38,21 +39,33 @@ const SchedulingSettingsCard = () => {
       <div>
         <ClientSelectionType />
       </div>
-      {dropdownData.map((data) => (
-        <div
-          key={data.testingCenter}
-          className="d-flex align-items-center mb-8]"
-          style={{ marginTop: "10px", marginBottom: "20px" }}
-        >
-          <p
-            className="skyhopText"
-            style={{ marginRight: "30px", fontSize: "11px" }}
+      <div style={{ width: "70w" }}>
+        {dropdownData.map((data) => (
+          <div
+            key={data.testingCenter}
+            className="d-flex align-items-center mb-8]"
+            style={{ marginTop: "10px", marginBottom: "20px" }}
           >
-            {data.label}
-          </p>
-          <DropdownSelector items={clients} />
-        </div>
-      ))}
+            <p
+              className="skyhopText"
+              style={{ marginRight: "30px", fontSize: "11px" }}
+            >
+              {data.label}
+            </p>
+            <DropdownSelector items={clients} />
+            <div style={{ width: "10%" }}>
+              <img
+                src={imagePlaceholder}
+                alt="Drag and Drop File"
+                style={{
+                  maxWidth: "100%",
+                  marginLeft: "4px",
+                }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import imagePlaceholder from "../images/file_icon.png"; // Import your specific image
+import imagePlaceholder from "../images/fileUpload2.png";
 
 const FileDropZone = ({ onFilesDrop }) => {
   const [dragging, setDragging] = useState(false);
@@ -55,7 +55,7 @@ const FileDropZone = ({ onFilesDrop }) => {
           src={imagePlaceholder}
           alt="Drag and Drop File"
           style={{
-            maxWidth: "8%",
+            maxWidth: "6%",
             marginBottom: "10px",
             align: "center",
           }}

@@ -141,8 +141,8 @@ const App = () => {
               borderRadius: "12px",
               width: "15%",
               backgroundColor: "white",
-              color: "green",
-              border: "2px solid green",
+              color: "orange",
+              border: "2px solid orange",
               fontSize: "12px",
               padding: "10px",
             }}
