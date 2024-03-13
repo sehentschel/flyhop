@@ -66,7 +66,9 @@ const FileDropZone = ({ onFilesDrop }) => {
           ref={fileInputRef}
           onChange={handleFileSelect}
         />
-        <p>Drag &amp; Drop files here or click to Browse</p>
+        <p className="skyhopText">
+          Drag &amp; Drop Here Or <b>Browse</b>
+        </p>
         {droppedFiles.length > 0 && (
           <div>
             <h2>Dropped Files:</h2>

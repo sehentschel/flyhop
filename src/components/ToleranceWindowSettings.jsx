@@ -10,20 +10,16 @@ const ToleranceWindow = () => {
     setIsChecked(!isChecked);
   };
   return (
-    <Row>
+    <Row style={{ marginLeft: "1px" }}>
       <Col xs={3} style={{ padding: 0, width: "120px" }}>
         <div className="form-check form-switch">
           <input
-            className="form-check-input"
+            className="form-check-input toggle-checkbox"
             type="checkbox"
-            id="flexSwitchCheckDefault"
             checked={isChecked}
             onChange={handleToggle}
           />
-          <label
-            className="form-check-label skyhopText"
-            htmlFor="flexSwitchCheckDefault"
-          >
+          <label className="form-check-label skyhopText">
             Toggle
             {isChecked ? " ON" : " OFF"}
           </label>

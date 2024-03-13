@@ -12,7 +12,6 @@ const FileDragDropCard = ({ setFiles }) => {
   const [uploadedFiles, setUploadedFiles] = useState(null);
   const [progress, setProgress] = useState(0);
   const [running, setRunning] = useState(false);
-  let interval;
 
   useEffect(() => {
     handleReset();
@@ -61,8 +60,8 @@ const FileDragDropCard = ({ setFiles }) => {
       <div style={{ textAlign: "center" }}>
         <div>
           {uploadedFiles !== null ? (
-            <label className="skyhopText skyhopLabel">
-              Uploaded File: {uploadedFiles[0]?.name}
+            <label className="skyhopLabel">
+              <b>Uploaded File: {uploadedFiles[0]?.name}</b>
             </label>
           ) : (
             <div></div>
@@ -74,7 +73,12 @@ const FileDragDropCard = ({ setFiles }) => {
             handleFilesDrop(uploadedFiles);
           }}
           className="buttonModal"
-          style={{ width: "50%", position: "center" }}
+          style={{
+            width: "50%",
+            position: "center",
+            fontSize: "12px",
+            padding: "10px",
+          }}
         >
           Upload Manifest
         </Button>

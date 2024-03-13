@@ -33,11 +33,11 @@
 
 .buttonModal {
   color: white;
-  border-radius: 12px;
   background-color: rgba(36, 61, 107, 255) !important;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(36, 61, 107, 255) !important
+  border: 1px solid rgba(36, 61, 107, 255) !important;
+  border-radius: 10px !important;
 }
 
 .buttonModa:hover {
@@ -55,18 +55,18 @@
 
 .skyhopLabel {
   color: rgba(36, 61, 107, 255);
+  font-family: Arial;
+  font-size: 12px;
   text-align: left;
-  font-weight: 700;
+  font-weight: bolder;
   margin-left: 0;
-}
-
-.skyhopTextBold {
-  font-weight: 500;
 }
 
 .skyhopText {
   color: rgba(36, 61, 107, 255);
-  font-size: smaller;
+  font-size:12px;
+  font-family: Arial;
+  font-weight: bold;
 }
 
 .skyhopTextColor {
@@ -106,6 +106,10 @@
   margin-top: 10px;
 }
 
-.custom-dropdown-toggle::hover {
+.custom-dropdown-toggle:hover {
     background-color: rgba(255, 255, 255, 0.674);
+}
+
+input[type='checkbox']:checked {
+  background-color: rgba(36, 61, 107, 255) !important;
 }
